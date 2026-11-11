@@ -1,0 +1,28 @@
+# Build output
+build/
+build-*/
+out/
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+.ninja_deps
+.ninja_log
+
+# IDE and local configuration
+.vs/
+.vscode/
+.idea/
+.qtcreator/
+*.user
+*.user.*
+CMakeUserPresets.json
+
+# Binaries and debug artifacts
+*.exe
+*.dll
+*.pdb
+*.ilk
+*.obj

@@ -1,0 +1,30 @@
+{
+  "version": 6,
+  "cmakeMinimumRequired": { "major": 3, "minor": 24, "patch": 0 },
+  "configurePresets": [
+    {
+      "name": "mingw64-debug",
+      "displayName": "MSYS2 mingw64 (Debug)",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/mingw64-debug",
+      "toolchainFile": "${sourceDir}/cmake/mingw64-toolchain.cmake",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "mingw64-release",
+      "displayName": "MSYS2 mingw64 (Release)",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/mingw64-release",
+      "toolchainFile": "${sourceDir}/cmake/mingw64-toolchain.cmake",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    }
+  ],
+  "buildPresets": [
+    { "name": "mingw64-debug", "configurePreset": "mingw64-debug" },
+    { "name": "mingw64-release", "configurePreset": "mingw64-release" }
+  ]
+}

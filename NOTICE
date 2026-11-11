@@ -1,0 +1,26 @@
+v8GitView
+Copyright (c) 2026 v8GitView contributors
+
+This product uses third-party software and draws design inspiration from
+open-source Git clients. No source code from the projects listed under
+"Design inspiration" has been copied into this repository.
+
+Qt 6
+  https://www.qt.io/
+  Qt is available under the LGPL-3.0, GPL-3.0 and commercial licenses.
+  v8GitView links dynamically against Qt libraries, so the Qt libraries can
+  be replaced by the user. When distributing binaries, include the Qt
+  license texts and the LGPL-3.0 source offer required by those licenses.
+
+libgit2
+  https://libgit2.org/
+  libgit2 is licensed under GPL-2.0 with a linking exception that allows
+  linking it with projects under other licenses. The exception is included
+  in the libgit2 source distribution (COPYING).
+
+Design inspiration (permissive licenses, no code copied)
+  lazygit    - MIT - https://github.com/jesseduffield/lazygit
+  GitAhead   - MIT - https://github.com/gitahead/gitahead
+  SourceGit  - MIT - https://github.com/sourcegit-scm/sourcegit
+
+Qt standard icons are provided by the Qt Widgets module.
