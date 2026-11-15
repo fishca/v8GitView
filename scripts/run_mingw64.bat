@@ -1,5 +1,6 @@
 @echo off
 setlocal EnableExtensions
+cd /d "%~dp0.."
 
 rem Run v8GitView with the Qt/libgit2 DLLs from MSYS2.
 rem
@@ -26,7 +27,7 @@ if "%MSYS2_ROOT%"=="" (
 if "%CONFIG%"=="" set "CONFIG=release"
 set "PATH=%MSYS2_ROOT%\mingw64\bin;%PATH%"
 
-set "EXE=%~dp0..\build\mingw64-%CONFIG%\v8GitView.exe"
+for %%I in ("%~dp0..\build\mingw64-%CONFIG%\v8GitView.exe") do set "EXE=%%~fI"
 if not exist "%EXE%" (
     echo Executable not found: %EXE%
     echo Build it first with scripts\build_mingw64.bat.
@@ -34,8 +35,8 @@ if not exist "%EXE%" (
 )
 
 if "%REPO%"=="" (
-    start "" "%EXE%"
+    start "" /d "%~dp0.." "%EXE%"
 ) else (
-    start "" "%EXE%" "%REPO%"
+    start "" /d "%~dp0.." "%EXE%" "%REPO%"
 )
 endlocal

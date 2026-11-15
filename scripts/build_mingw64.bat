@@ -1,5 +1,6 @@
 @echo off
 setlocal EnableExtensions
+cd /d "%~dp0.."
 
 rem Build v8GitView with the MSYS2 mingw64 toolchain.
 rem
